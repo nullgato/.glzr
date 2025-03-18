@@ -128,6 +128,10 @@ window_rules:
     match:
       - window_process: { regex: "Code" }
 
+  - commands: ["move --workspace ", "focus --workspace "]
+    match:
+      - window_process: { regex: "Vesktop" }
+
   - commands: ["toggle-floating --centered"]
     match:
       - window_process: { regex: "WindowsTerminal|Taskmgr" }
@@ -172,7 +176,8 @@ workspaces:
     keep_alive: true
   - name: ""
     keep_alive: true
-  - name: "4"
+  - name: ""
+    keep_alive: true
   - name: "5"
   - name: "6"
   - name: "7"
@@ -187,7 +192,7 @@ keybindings:
     bindings: ["alt+2"]
   - commands: ["focus --workspace "]
     bindings: ["alt+3"]
-  - commands: ["focus --workspace 4"]
+  - commands: ["focus --workspace "]
     bindings: ["alt+4"]
   - commands: ["focus --workspace 5"]
     bindings: ["alt+5"]
@@ -207,7 +212,7 @@ keybindings:
     bindings: ["alt+shift+2"]
   - commands: ["move --workspace ", "focus --workspace "]
     bindings: ["alt+shift+3"]
-  - commands: ["move --workspace 4", "focus --workspace 4"]
+  - commands: ["move --workspace ", "focus --workspace "]
     bindings: ["alt+shift+4"]
   - commands: ["move --workspace 5", "focus --workspace 5"]
     bindings: ["alt+shift+5"]
