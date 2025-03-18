@@ -1,0 +1,52 @@
+.workspaces
+    display: flex
+    align-items: center
+
+    /* Every descendent except 1st */
+    & > :not(:first-child)
+        margin-left: 4px
+
+.workspace,
+.tiling-direction
+    font-size: 20px
+    padding: 1px 6px
+    color: rgb(255 255 255 / 90%)
+    border: none
+    border-radius: 2px
+    cursor: pointer
+
+.workspace
+    background: rgba(255, 75, 75, 0.3)
+
+    &.displayed
+        background: rgb(255 255 255 / 15%)
+
+    &.focused,
+    &:hover
+        color: rgb(0 0 0 / 90%)
+        background: rgba(255, 75, 75, 0.7)
+
+.tiling-direction
+    background: none
+    color: rgb(185 125 125 / 100%)
+
+.tiling-direction i
+    margin-right: 0px
+
+.binding-mode,
+.paused-button
+    background: none
+    border-radius: 2px
+    line-height: 1
+    border: 0
+    cursor: pointer
+    padding: 0
+    margin-left: 2px
+
+.binding-mode
+    color: rgb(185 125 125 / 100%)
+    font-size: 18px
+
+.binding-mode,
+.paused-button i
+    margin-right: 0px !important
